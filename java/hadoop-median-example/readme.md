@@ -3,26 +3,25 @@ This sample uses the MapReduce API to find the Median temperature from an Input 
 
 ## Sample Input File
 	
-	1990;21
-	1990;20
-	1990;24
-	1991;23
-	1991;24
-	1991;26
-	1991;27	
+	1990 21
+	1990 20
+	1990 24
+	1991 23
+	1991 24
+	1991 26
+	1991 27	
 
 ## Copy Input File into HDFS
 	
-	bin/hadoop fs -copyFromLocal ../hadoop-samples/myinput/sample-median.txt /user/vmware/myinput/sample-median.txt
+	hadoop fs -copyFromLocal ../hadoop-samples/myinput/sample-median.txt /user/hduser/input/sample-median.txt
 
 ## Execute the MapReduce Job
 	
-	bin/hadoop jar ../hadoop-samples/hadoop-median-example/target/hadoop-median-example-1.0.jar \
-  		com.hadoop.example.hadoop.MedianTemperature  /user/vmware/myinput/sample-median.txt  /user/vmware/output/median 
+	hadoop jar ../hadoop-samples/hadoop-median-example.jar com.hadoop.example.MedianTemperature  /user/hduser/input/sample-median.txt  /user/hduser/output/median
   
 ## Copy Output to Local File System  
 
-	bin/hadoop fs -copyToLocal /user/vmware/output-median output/median
+	hadoop fs -copyToLocal /user/hduser/output-median output/median
 	
 	
 ## Output from the MapReduce Task

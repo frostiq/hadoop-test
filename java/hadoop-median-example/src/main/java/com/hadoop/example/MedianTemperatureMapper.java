@@ -22,7 +22,7 @@ public class MedianTemperatureMapper extends Mapper<LongWritable, Text, Text, In
 
 	  protected void map(LongWritable key, Text value, Context context)
 	      throws java.io.IOException, InterruptedException {
-        String[] line = value.toString().split(";");
+        String[] line = value.toString().split("\\s");
 	    String year = line[0];
 	    yearText.set(year);
 	    int temp = Integer.parseInt(line[1]);
