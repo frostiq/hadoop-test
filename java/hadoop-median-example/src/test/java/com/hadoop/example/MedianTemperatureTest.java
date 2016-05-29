@@ -29,7 +29,7 @@ public class MedianTemperatureTest {
 	@Test
 	public void testMapper() {
 		mapDriver.withInput(new LongWritable(), new Text(
-				"1990;25"));
+				"1990 25"));
 		mapDriver.withOutput(new Text("1990"), new IntWritable(25));
 		mapDriver.runTest();
 	}
