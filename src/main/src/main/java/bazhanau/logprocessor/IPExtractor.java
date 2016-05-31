@@ -18,21 +18,21 @@ public class IPExtractor extends Mapper<LongWritable, Text, Text, IntWritable> {
     private Matcher matcher;
 
     private static final String IPADDRESS_PATTERN =
-            "^([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\." +
+            "([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\." +
                     "([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\." +
                     "([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\." +
-                    "([01]?\\d\\d?|2[0-4]\\d|25[0-5])$";
+                    "([01]?\\d\\d?|2[0-4]\\d|25[0-5])";
 
     /**
      * Validate ip address with regular expression
      * @param ip ip address for validation
      * @return true valid ip address, false invalid ip address
      */
-    public String extract(final String ip){
+    protected String extract(final String ip){
         matcher = pattern.matcher(ip);
         if(matcher.find())
             return matcher.group();
-        else return "";
+        else return "-";
     }
 
     @Override
