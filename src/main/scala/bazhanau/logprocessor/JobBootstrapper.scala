@@ -21,6 +21,9 @@ object JobBootstrapper{
     job.setMapperClass(classOf[IPMapper])
     job.setReducerClass(classOf[Counter])
 
+    job.setMapOutputKeyClass(classOf[Text]);
+    job.setMapOutputValueClass(classOf[IntWritable]);
+
     job.setOutputKeyClass(classOf[Text])
     job.setOutputValueClass(classOf[IntWritable])
 
