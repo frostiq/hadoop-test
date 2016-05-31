@@ -4,7 +4,8 @@
 
 ## Execute the MapReduce Job
 	
-	hadoop jar hadoop-samples.jar bazhanau.logprocessor.Main /user/hduser/input/sample.log  /user/hduser/output
+	hadoop jar hadoop-samples.jar bazhanau.logprocessor.JobBootstrapper$ /user/hduser/input/sample.log  /user/hduser/output
+
   
 ## Copy Output to Local File System  
 
