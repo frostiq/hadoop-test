@@ -1,6 +1,5 @@
-package bazhanau
+package bazhanau.logprocessor
 
-import bazhanau.logprocessor.{Counter, IPMapper}
 import org.apache.hadoop.fs.Path
 import org.apache.hadoop.io.{IntWritable, Text}
 import org.apache.hadoop.mapreduce.Job
