@@ -2,7 +2,7 @@ package bazhanau.logprocessor
 
 import java.lang.Iterable
 
-import scala.collection.JavaConverters._;
+import scala.collection.JavaConverters._
 
 import org.apache.hadoop.io.{IntWritable, LongWritable, Text}
 import org.apache.hadoop.mapreduce.{Mapper, Reducer}
