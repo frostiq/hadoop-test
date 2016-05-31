@@ -1,5 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### Java template
+target
 *.class
 
 # Mobile Tools for Java (J2ME)
@@ -12,4 +13,10 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 /java/hadoop-median-example/.idea/
+
+*.iml
+*.ipr
+*.iws
+.idea
+out
 
